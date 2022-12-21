@@ -29,10 +29,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
 
-    "rm": "del docs",
+    "rm": "git rm -r docs",
+    "make": "mkdir docs",
     "mv": "move build docs",
     "git": "git add . && git commit && git push origin master",
-    "deploy": "npm run rm && npm run build && npm run mv && npm run git"
+    "deploy": "npm run rm && npm run make && npm run build && npm run mv && npm run git"
   },
   "eslintConfig": {
     "extends": [
