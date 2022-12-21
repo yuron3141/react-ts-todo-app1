@@ -26,7 +26,8 @@ function App() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [ftodos, setFtodos] = useState<Todo[]>([]);
 
-  const [nowTime, setNowTime] = useState<Time>({hour: new Date().getHours(), minutes: new Date().getMinutes()});
+  const tmpTime = new Date();
+  const [nowTime, setNowTime] = useState<Time>({hour: tmpTime.getHours(), minutes: tmpTime.getMinutes()});
 
   type Todo = {
     id: number;           //ユニークキー
@@ -41,7 +42,9 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      setNowTime({hour: new Date().getHours(),minutes: new Date().getMinutes()})
+      const time = new Date();
+
+      setNowTime({hour: time.getHours(),minutes: time.getMinutes()})
     }, 2000)
   }, [nowTime]);
 
