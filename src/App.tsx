@@ -166,7 +166,7 @@ function App() {
           </Box>
         </Grid>
       </Grid>
-      <Grid container alignItems='center' justifyContent='center' direction="column">
+      <Grid container direction="column">
         <Grid item xs={10}>
           <Grid container
                 direction="row"
@@ -174,7 +174,7 @@ function App() {
                 spacing={1}
           >
             <Grid item xs={5} >
-              <Box sx={{width: '100px'}}>
+              <Box sx={{width: '400px'}}>
                 <Typography variant="h5" style={{color: "#4fc3f7"}} gutterBottom>
                   作業中
                 </Typography>
@@ -182,15 +182,15 @@ function App() {
               {todos.map((todo, key) => (
                 <Box component="span" sx={{ p: 2}}>
                   <Stack spacing={1} direction="row" key={key} paddingBottom="10px" >
-                    <TextField id="outlined-basic"  sx={{width: '36ch'}} size="small" label="タスク名" variant="outlined" onChange={(e)=> handleEdit(todo.id, e.target.value, true)} value={todo.inputValue}/>
-                    <Button variant="contained" sx={{width: '7ch'}} onClick={() => handleComplete(todo.id)}>完了</Button>
-                    <Button variant="outlined" sx={{width: '7ch'}} onClick={() => handleDelete(todo.id)}>削除</Button>
+                    <TextField id="outlined-basic"  sx={{width: '350px'}} size="small" label="タスク名" variant="outlined" onChange={(e)=> handleEdit(todo.id, e.target.value, true)} value={todo.inputValue}/>
+                    <Button variant="contained" sx={{width: '25px'}} onClick={() => handleComplete(todo.id)}>完了</Button>
+                    <Button variant="outlined" sx={{width: '25px'}} onClick={() => handleDelete(todo.id)}>削除</Button>
                   </Stack>
                 </Box>
               ))}
             </Grid>
             <Grid item xs={5} >
-              <Box sx={{width: '100px'}}>
+              <Box sx={{width: '400px'}}>
                 <Typography variant="h5" style={{color: "#4caf50"}} gutterBottom>
                   完了
                 </Typography>
@@ -208,7 +208,7 @@ function App() {
           </Grid>
         </Grid>
       </Grid>
-      <div style={{height: '350px'}}></div>
+      <div style={{height: '540px'}}></div>
       <Footer>&copy;{new Date().getUTCFullYear()} ゆーろん All rights reserved</Footer>
     </div>
   );
